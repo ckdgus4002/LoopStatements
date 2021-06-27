@@ -40,7 +40,7 @@ namespace LCH
         {
             while (0 < runNumber)
             {
-                GC.Collect(2);
+                //GC.Collect(2);
 
                 var start = new DateTime();
                 
@@ -48,20 +48,20 @@ namespace LCH
                 start = DateTime.Now;
                 for (var l = 0; l < array.Length; l++) { }
                 _times[0].Add((DateTime.Now - start).Ticks);
-                
-                start = DateTime.Now;
-                foreach (var item in array) { }
-                _times[1].Add((DateTime.Now - start).Ticks);
-                
-                var enumerable = new IEnumerable<int>[100_000];
-                start = DateTime.Now;
-                foreach (var item in enumerable) { }
-                _times[2].Add((DateTime.Now - start).Ticks);
 
-                var j = 0;
-                start = DateTime.Now;
-                while (j < array.Length) { j++; }
-                _times[3].Add((DateTime.Now - start).Ticks);
+                // start = DateTime.Now;
+                // foreach (var item in array) { }
+                // _times[1].Add((DateTime.Now - start).Ticks);
+                
+                // var enumerable = new IEnumerable<int>[100_000];
+                // start = DateTime.Now;
+                // foreach (var item in enumerable) { }
+                // _times[2].Add((DateTime.Now - start).Ticks);
+                //
+                // var j = 0;
+                // start = DateTime.Now;
+                // while (j < array.Length) { j++; }
+                // _times[3].Add((DateTime.Now - start).Ticks);
 
                 // start = DateTime.Now;
                 // for (var l = 0; l < new int[100_000].Length; l++) { }
